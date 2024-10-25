@@ -1,0 +1,38 @@
+.sidebar-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .sidebar-list {
+    list-style: none;
+    padding: 0;
+    width: 250px;
+  
+  }
+  
+  .sidebar-item {
+    padding: 10px ;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #3a88a0;
+    font-weight: 500;
+  }
+  
+  .sidebar-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .sidebar-item.active {
+    border-left: 3px solid #29b1ba;  
+    background-color: transparent; 
+    color: #53c0c7; 
+  }
+  .content-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+  }
+  .done-icon{
+    float: right;
+  }

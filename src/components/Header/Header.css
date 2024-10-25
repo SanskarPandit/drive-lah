@@ -1,0 +1,96 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar Styles */
+  .navbar-container {
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: space-between; /* Separates left (logo) and right (menu + profile) */
+    align-items: center;
+    padding: 0 24px;
+    background-color: #00a3ad;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Logo styles */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 25px;
+    margin-left: 10px;
+  }
+  
+
+  
+  /* Menu and Profile on the right side */
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adds spacing between the menu and profile */
+  }
+  
+  /* Menu Styles */
+  .menu {
+    display: flex; /* Align menu items horizontally */
+    align-items: center;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu ul li {
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fcfcfc;
+    transition: color 0.3s ease;
+    margin-left: 10px;
+    
+  }
+  
+  .menu ul li:hover {
+    color: #e6e6e6;
+  }
+  
+  /* Profile Icon */
+  .profile {
+    display: flex;
+    align-items: center; /* Align the profile image vertically */
+  }
+  
+  .profile-img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 30px;
+  }
+  
+  /* Mobile View Styles */
+  @media screen and (max-width: 768px) {
+    .menu ul {
+      display: none; /* Hide the menu items on small screens */
+    }
+  
+    .menu-toggle {
+      display: block; /* Show the hamburger icon for mobile */
+      cursor: pointer;
+    }
+  }
+  
+  @media screen and (min-width: 769px) {
+    .menu-toggle {
+      display: none; /* Hide the hamburger icon on larger screens */
+    }
+  }
+  
