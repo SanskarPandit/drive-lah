@@ -1,0 +1,123 @@
+body {
+  background-color: #fcfcfc;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.sidebar-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  width: 160px;
+}
+
+.sidebar-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #3a88a0;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-item:hover {
+  background-color: #f0f0f0;
+}
+
+.sidebar-item.active {
+  border-left: 3px solid #29b1ba;
+  background-color: transparent;
+  color: #53c0c7;
+}
+
+.content-container {
+  flex-grow: 1;
+  padding: 10px;
+  max-width: 1000px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #e9e8e8;
+}
+
+.done-icon {
+  float: right;
+  margin-top: 2px;
+}
+
+.mobile-select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.btn-container{
+  display: flex;
+  padding: 16px;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 20px;
+  justify-content:flex-end;
+}
+.next-button{
+  margin-right: 150px;
+  padding: 10px 80px 10px 80px ;
+  font-size: 1rem;
+  border: none;
+  background-color: #ffea61;
+  color: #026786;
+  border-radius: 8px;
+
+}
+.next-button:hover{
+  box-shadow: 0 4px 8px 0 #c4c4c4;
+}
+
+@media (max-width: 768px) {
+  .btn-container {
+      align-items: center;
+    justify-content: center; /* Center button on mobile */
+    width: 100%;            /* Full width */
+  }
+
+  .next-button {
+    width: 100%;           /* Full width button on mobile */
+    box-sizing: border-box;
+    margin: 0;/* Include padding in the width calculation */
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .sidebar-list {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .content-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+}
