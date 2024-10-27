@@ -1,15 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './PlanCard.css';
 import { AiOutlineEnvironment } from "react-icons/ai";
 import { IoSpeedometerOutline } from "react-icons/io5";
 import { MdOutlineLock } from "react-icons/md";
-import { FaCreditCard } from "react-icons/fa"; // Importing the credit card icon
+import { FaCreditCard } from "react-icons/fa"; 
 
 const PlanCard = ({ cardDetails }) => {
   const [selectedCard, setSelectedCard] = useState(null);
   const [selectedAddOn, setSelectedAddOn] = useState("");
   const [showCardDetails, setShowCardDetails] = useState(false);
   const [cardInput, setCardInput] = useState("");
+
+  useEffect(() => {
+    const storedCard = JSON.parse(localStorage.getItem('selectedCard'));
+    const storedAddOn = localStorage.getItem('selectedAddOn');
+    const storedCardInput = localStorage.getItem('cardInput');
+
+    if (storedCard) {
+      setSelectedCard(storedCard);
+      if (storedCard.title === "Good mates" || storedCard.title === "Best mates") {
+        setShowCardDetails(true);
+      }
+    }
+    if (storedAddOn) setSelectedAddOn(storedAddOn);
+    if (storedCardInput) setCardInput(storedCardInput);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('selectedCard', JSON.stringify(selectedCard));
+    localStorage.setItem('selectedAddOn', selectedAddOn);
+    localStorage.setItem('cardInput', cardInput);
+  }, [selectedCard, selectedAddOn, cardInput]);
 
   const handleCardClick = (card) => {
     setSelectedCard(card);
@@ -30,7 +51,7 @@ const PlanCard = ({ cardDetails }) => {
   };
 
   return (
-    <div >
+    <div>
       <div className='card'>
         {cardDetails.map((card, index) => (
           <div 
@@ -89,7 +110,7 @@ const PlanCard = ({ cardDetails }) => {
           <div className="payment-card">
             <div className="card-input">
               <div className="input-with-icon">
-                <FaCreditCard className="input-icon" /> {/* Credit card icon */}
+                <FaCreditCard className="input-icon" /> 
                 <input 
                   type="text" 
                   placeholder="1234 5678 1234 5678                                MM/YY   CVC"

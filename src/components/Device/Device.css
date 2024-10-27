@@ -1,0 +1,160 @@
+.device-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.device-details {
+  border-bottom: 1px solid #c9c9c9;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.device-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.device-input {
+  padding: 10px 10px 10px 6px;
+  font-size: 0.9rem;
+  width: 100%;
+  color: #3f3f3f;
+  border-radius: 5px;
+  border: 1px solid #c9c9c9;
+  margin-top: 7px;
+}
+
+.select-deviceType {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #818181;
+}
+.device-no{
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #4a4a4a;
+}
+.device-inputs,
+.device-toggle {
+  flex: 1;
+  min-width: 200px;
+}
+
+.toggle-container {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.toggle-label {
+  color: #333;
+}
+
+.toggle-description {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 39px;
+  height: 19px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #026786;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+/* Styles for additional fields, visible only when toggle is true */
+.device-additional-fields {
+  display: flex; /* Flex by default */
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.device-additional-fields div {
+  flex: 1 1 45%;
+  min-width: 200px;
+}
+.upload-image{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  
+}
+.upload-image button {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  color: #007bff;
+  cursor: pointer;
+  width: 60%;
+  text-decoration: underline;
+  padding:50px
+}
+  .upload-label{
+    color:#5a5a5a;
+    font-size: 13px;
+  }
+  .select-plan{
+    font-size: 20px;
+  }
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .device-info {
+    flex-direction: column;
+  }
+  .upload-image button{
+    margin-top: 10px;
+    width: 100%;
+  }
+  .device-inputs,
+  .device-toggle,
+  .device-additional-fields div {
+    flex: 1 1 100%;
+  }
+}

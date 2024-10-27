@@ -1,5 +1,6 @@
 export const cardDetails = [
   {
+    value:"just_mates",
     title: "Just mates",
     gps: "Bring your own GPS",
     mileage: "Mileage reporting to be done by you",
@@ -8,6 +9,7 @@ export const cardDetails = [
     addOns: ["BYO secondary GPS - $5/month"]
   },
   {
+    value:"good_mates",
     title: "Good mates",
     gps: "Primary GPS included",
     mileage: "Automated mileage calculations",
@@ -16,6 +18,7 @@ export const cardDetails = [
     addOns: ["BYO secondary GPS - $5/month", "BYO secondary GPS - $10/month"]
   },
   {
+    value:"best_mates",
     title: "Best mates",
     gps: "Keyless access technology",
     mileage: "Automated mileage calculations",
