@@ -14,9 +14,7 @@ const DeviceManagement = () => {
               <p className='descp'>Add details of device,if any already installed on your car. If none, then continue to next step</p>
           </div>
         <div className='device-plan-container'>
-            
              <Device deviceDetails={deviceDetails}/>
-           
         </div>
 
       </div>

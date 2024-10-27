@@ -9,7 +9,7 @@
 }
 .descp{
     color:#5a5a5a;
-    font-size: 14px;
+    font-size: 13px;
     margin-left: 15px;
     margin-bottom: 10px;
 }
@@ -44,4 +44,11 @@
 .descp p{
     color:#1f1f1f;
     font-size: 15px;
+}
+@media (max-width: 768px) {
+    .link {
+        margin-top: 2px;
+        display: flex;
+        font-size: 0.8rem;
+    }
 }

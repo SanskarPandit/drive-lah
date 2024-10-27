@@ -1,4 +1,4 @@
-/* General card styling */
+ 
 .card {
   display: flex;
   flex-wrap: wrap;
@@ -55,9 +55,7 @@
   color: #0d6786;
   margin-top: 15px;
 }
-
-
-/* Add-on section styling */
+ 
 .add-on-selection {
   display: flex;
   flex-wrap: wrap;
@@ -159,17 +157,17 @@ width: 100%;
 
 .input-icon {
   position: absolute;
-  left: 10px; /* Position the icon */
-  color: #888; /* Icon color */
-  font-size: 20px; /* Icon size */
+  left: 10px;  
+  color: #888;  
+  font-size: 20px;  
 }
 
 .input-field {
-  padding: 10px 10px 10px 40px; /* Add padding to the left to make space for the icon */
+  padding: 10px 10px 10px 40px; 
   border: 1px solid #ddd;
   border-radius: 4px;
-  width: 100%; /* Full width input */
-  box-sizing: border-box; /* Ensure padding is included in width */
+  width: 100%;  
+  box-sizing: border-box;
 }
 
 .payment-info {
@@ -181,25 +179,24 @@ width: 100%;
   color: #555;
   font-size: 15px;
 }
-/* Responsive styles */
 @media (max-width: 768px) {
   .card-container {
-    flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+    flex: 1 1 calc(50% - 20px);  
   }
 }
 
 @media (max-width: 480px) {
   .card-container {
-    flex: 1 1 100%; /* 1 card per row */
+    flex: 1 1 100%;  
   }
 }
-/* Responsive adjustments */
+ 
 @media (max-width: 768px) {
   .card-container {
     flex: 1 1 calc(50% - 20px);
   }
   .add-on-card {
-    width: 100%; /* Full width on smaller screens */
+    width: 100%;  
   }
   .add-on-text {
     font-size: 0.9rem;

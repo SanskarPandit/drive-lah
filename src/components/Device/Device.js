@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import './Device.css';
 
-const Device = ({ deviceDetails }) => {
-  // State to track which device is selected for custom fields
+const Device = ({ deviceDetails }) => { 
   const [selectedDevice, setSelectedDevice] = useState(null);
-
-  // Toggle change handler
-  const handleToggleChange = (no) => {
-    // If the same device is toggled, reset to null; otherwise, set the selected device number
+ 
+  const handleToggleChange = (no) => { 
     setSelectedDevice(selectedDevice === no ? null : no);
   };
 
@@ -40,8 +37,7 @@ const Device = ({ deviceDetails }) => {
               </p>
             </div>
           </div>
-
-          {/* Conditionally rendered fields based on selectedDevice */}
+ 
           {selectedDevice === device.no && (
             <div className='device-additional-fields'>
               <div>
